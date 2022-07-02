@@ -1,8 +1,15 @@
 import React from 'react'
 import {MdDeleteForever} from 'react-icons/md'
+import {TiEdit} from 'react-icons/ti'
 
 
-function Note({id,text,date,handleDelete}) {
+function Note({id,text,date,handleDelete , handleEdit}) {
+
+    
+
+
+
+
     return (
         <div className="note">
         
@@ -13,6 +20,7 @@ function Note({id,text,date,handleDelete}) {
             
                 <small>{date}</small>
                 <MdDeleteForever onClick={()=>handleDelete(id)} className="delete-icon" size="1.3em" />
+                <TiEdit onClick={()=>handleEdit(text , id)} className="delete-icon" size="1.3em" />
             </div>
             
         </div>
